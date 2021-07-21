@@ -22,4 +22,12 @@ In the real world this might mean a LOT of data. It's the job of a data scientis
 
 Given some data it will perform the basic role of a data scientist for us ... to prepare the data and iteratively run it through a selection of algorithms that it thinks have a good chance of success, compare the results and build a model that we can test, based on those results.
 
+1. Lets create (or can use the file I've made here) some data to train the model with. We'll use data we know will create a model that will give a certain prediction so we can learn how it all works. Essentially the data in this file shows one thing ... once "y deflection" reaches 1.2 we get a failure. Although temperature and x deflection change throughout the file, I've crafted the data so that these should have no baring on the liklihood of failure and we should end up with a model that simply predicts failure as y defelction increases towards 1.2.
+2. No we can set up our Data Science environment on IBM Cloud. This is all contained within the [Watson Studio](https://cloud.ibm.com/catalog/services/watson-studio) service, which you can set up for free (and it will remain available if you use it at least once every 30 days). Create this service and then click the Get Started button.
+3. Slightliy confusingly, this then opens "IBM Cloud Pak for Data" but don't worry, Watson Studio is integral to Cloud Pak for Data so this is what Watson Studio runs within.
+4. Underneath the welcome message you'll see three options. Select *Create a project* link under *Work with data* then click *Create and empty project*
+5. Give the project a name. Every project will have files and data associated with it and they need to be stored somewhere. You may be asked to create some Cloud Object Sorage at this point. If you are, then follow that process then click Create to create the project. If you already have storage configured this will automatically be selected.
+6. You'll then be presented with a page where you can add and manage all the components of the project. One this to note here is the Environments page. This is important to track how much of your free credit is left, and if you sign up for the paid service, how much resource it is using.
+7. 
+
 ## Next Steps
