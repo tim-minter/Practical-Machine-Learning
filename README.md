@@ -1,4 +1,4 @@
-# A Workshop on Pracically Applying Machine Learning to Streaming Data
+# A Workshop on Pracically Applying Machine Learning to Streaming Data using Watson Studio
 ### You have data streaming in from sensors. You want to train a model on that data and apply it to the data in real time, in the real world
 
 ## Introduction
@@ -8,6 +8,8 @@ The term "Machine Learning" or "AI" is fairly well understood by a lot of people
 * What do I end up with after a model has been created and trained? Is it just some code? What does it need to run on?
 * Assuming it is some code, what does that look like? How do I call it? What about authentication and management of that "thing"?
 * Then there's a whole question about how do you maintain it, change it, if new information comes along that needs to be incorporated eg in the summer it becomes clear that temperature is more or less of a factor that you thought? Or in autumn, who knew leaves falling on something would be a thing?
+
+You can find the solution to all these questions above by experimenting and doing it yourself, with various technologies and techniques, but the value of using a cloud service like Watson Studio really becomes evident in situations like this, I'd suggest. Really shortening the time to implement a working soltion and really reducing the learning time that might otherwise be involved.
 
 ## Summary
 You will ceate a simple spreadsheet containing data you might get from a sensor. This allows you to get you familiar with how a model is created and you can then use that knowledge when thinking about your real data later. 
