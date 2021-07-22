@@ -42,6 +42,48 @@ Given some data it will perform the basic role of a data scientist for us ... to
 19. The next page allows you to create an actual deployment in the space. Click on the **Create deployment** button ![Create deployment](https://github.com/tim-minter/machine-learning-with-streaming-data/blob/main/createdeployment.png)
 20. In the page that appears, select the the deployment method. **Online** in this case. ![Deployment options](https://github.com/tim-minter/machine-learning-with-streaming-data/blob/main/createadeploymentoptions.png) and provide a name for the deployment.
 21. The next page shows the list of deployments you have in the selected space, and their status. After a few seconds your deployment will be "Deployed" which means it is available to be used. Note the three dot menu on the right hand side of the deployment that allows you to **Replace asset** (if you ever update the model) and **Edit configuration** (assign more resources to running it, if it is heavily utilised). ![Deployments view](https://github.com/tim-minter/machine-learning-with-streaming-data/blob/main/deployments.png)
-22. 
+22. Click on the model to open the page that allows you to test the model with manually entered data and provides the details you need to use the model via Curl, Java, Javascript, Python and Scala. Note that you need the API endpoint credentials (key) to use any of these methods of course. See **Using your model** below on how to obtain this **API key**. Lets test the model! Click on the **Test** tab and enter the 4 sets of data shown below. ![Model testing](https://github.com/tim-minter/machine-learning-with-streaming-data/blob/main/modeltesting.png)
+23. Then click the **Predict** button. You should get these results ```json
+{
+    "predictions": [
+        {
+            "fields": [
+                "prediction",
+                "probability"
+            ],
+            "values": [
+                [
+                    "no",
+                    [
+                        1,
+                        0
+                    ]
+                ],
+                [
+                    "no",
+                    [
+                        1,
+                        0
+                    ]
+                ],
+                [
+                    "yes",
+                    [
+                        0,
+                        1
+                    ]
+                ],
+                [
+                    "yes",
+                    [
+                        0,
+                        1
+                    ]
+                ]
+            ]
+        }
+    ]
+}
+```
 
 ## Next Steps
