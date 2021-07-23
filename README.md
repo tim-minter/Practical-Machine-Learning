@@ -94,7 +94,9 @@ Within Watson Studio our model sits within a deployment. At this point the model
 Note on the main menu of Watson Studio (click the burger icon at the top left of the Watson Studio page) that there is a section for **Projects** and a separate section for **Deployments** that contains your deployment **Spaces**
 To locate your "running" model (essentially get back to the page you see in step 21 above) use the main menu and go to the deployment space that contains your model.
 Slightly confusingly the **Space** contains Assets and _**Deployments**_. We have a Deployment/Space/Deployment stucture which seems strange, but that is the way it has been built.
-Within this **Space** select the **Deployments** tab and click on your model ![Deployments](https://github.com/tim-minter/machine-learning-with-streaming-data/blob/main/deploymentsspacedeployments.png)
+![Deployments](https://github.com/tim-minter/machine-learning-with-streaming-data/blob/main/deploymentsspacedeployments.png)
+
+Within this **Space** select the **Deployments** tab and click on your model ![Deployments view](https://github.com/tim-minter/machine-learning-with-streaming-data/blob/main/deployments.png)
 
 This page shows the unique public API endpoint for your deployed model. This endpoint is unique to your deployment and will remain the same if you replace the model with a different one at any time. Note also the sample code provided that can be used to call/use your model from various common languages as well using the basic/universal CURL command. You will note that authentication is required to call the API of course. 
 
