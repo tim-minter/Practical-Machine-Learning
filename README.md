@@ -89,11 +89,17 @@ Given some data it will perform the basic role of a data scientist for us ... to
 24. As we can see from the result, the 3rd and 4th data sets result in the model predicting failure with a probabilty of 1 ie 100%, as we would expect!
 
 ## Using Your Model
-In step 22 above we could see how to call the API of our model. That API was created when we deployed our model.
-Within Watson Studio our model sits on this structure:
-Project > Deployments > Spaces > Model
+In step 21 above we could briefly see how to call the API of our model. That API was created when we deployed our model.
+Within Watson Studio our model sits within a deployment. At this point the model is separate from project. That project can be deleted or added to etc with no impact to the deplyed model.
+Note on the main menu of Watson Studio (click the burger icon at the top left of the Watson Studio page) that there is a section for **Projects** and a separate section for **Deployments** that contains your deployment **Spaces**
+Using the main menu go to the deployment space that contains your model.
+Slightly confusingly the **Space** contains Assets and _**Deployments**_. We have a Deployment/Space/Deployment stucture which seems strange, but that is the way it has been built.
+Within this **Space** select the **Deployments** tab ![Deployments]()
 
 and the deplyment of that model is where we can control access and maintain the model (eg replacing it with a new model).
 
+To obatin the API key, click [here](https://cloud.ibm.com/iam/apikeys?_ga=2.107320577.2076131076.1626968412-622637277.1614526710) or go to your IBM Cloud Account and select **Manage** then **Access (IAM)** from the Manage menu on the top menu bar then **API Keys** from the menu on the left of the IAM page that appears.
+
+See [here](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/ml-authentication.html) for more information on the authentication process you'll need to know about before deplying your application.
 
 ## Next Steps
