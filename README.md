@@ -100,12 +100,22 @@ Within this **Space** select the **Deployments** tab and click on your model ![D
 
 This page shows the unique public API endpoint for your deployed model. This endpoint is unique to your deployment and will remain the same if you replace the model with a different one at any time. Note also the sample code provided that can be used to call/use your model from various common languages as well using the basic/universal CURL command. You will note that authentication is required to call the API of course. 
 
-To obatin the API key discussed on this page, click [here](https://cloud.ibm.com/iam/apikeys?_ga=2.107320577.2076131076.1626968412-622637277.1614526710) or go to your IBM Cloud Account and select **Manage** then **Access (IAM)** from the Manage menu on the top menu bar then **API Keys** from the menu on the left of the IAM page that appears.
-
-
+To obatin the API key discussed on this page, click [here](https://cloud.ibm.com/iam/apikeys?_ga=2.107320577.2076131076.1626968412-622637277.1614526710) or go to your IBM Cloud Account and select **Manage** then **Access (IAM)** from the Manage menu on the top menu bar then **API Keys** from the menu on the left of the IAM page that appears. From that page you can create a new API key.
 
 See [here](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/ml-authentication.html) for more information on the authentication process you'll need to know about before deplying your application.
+
+## Using Your Model with Streaming Data
+Now we are ready to apply our model to streaming data.
+
+
+
 
 
 
 ## Next Steps
+There are many ways streaming (or flowing or "in motion") data can be analysed with a Machine Learning model.
+They range from something linke a serverless function monitoring a ftp folder, an API (like the one you created above) being called dircetly by an application, using something like the "low code" NodeRED open source application available on pretty much any playform incliding Raspberry Pi, right up to builing an enterprose AI pipiepline with IBM Data Stage and Apache Kafka (or the IBM managed service version of Kafka... IBM Event Streams) and Watson Studio to manage the whole process end to end.
+
+If you build services or solutions for you cutsomers using IBM technology, IBM can help you with expertise and resources tailored to your situation. Contact xxxx.
+
+
