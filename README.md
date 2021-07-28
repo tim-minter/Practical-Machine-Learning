@@ -106,11 +106,23 @@ See [here](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/ml-a
 
 ## Using Your Model with Streaming Data
 Now we are ready to apply our model to streaming data.
+First we need to authenticate with the ML service. Using the API key you obtained above, run the following command (either substituting $API_KEY for the key or by setting the environment variable API_KEY to the value of the key via whatever process is relevant to your machine's operating system eg
 
+on Mac ```export API_KEY=[your key] ```
 
+Then run tbe following command from a terminal/command prompt
+```curl --insecure -X POST --header "Content-Type: application/x-www-form-urlencoded" --header "Accept: application/json" --data-urlencode "grant_type=urn:ibm:params:oauth:grant-type:apikey" --data-urlencode "apikey=$API_KEY" "https://iam.cloud.ibm.com/identity/token"```
 
+JSON data is returned and you will see an access_token value. Copy this value and set the environment variable access_token to this value using the same method as above.
 
+Locate your space ID and note the location of your service (us-south, eu-gb etc etc). Use both of these to construct your call to the ML service.
+You can locate your space ID by going to Watson Studio and locating the correct space under the Deplymets menu then selecting the Manage tab. the Space ID is the Space GUID shown there (as shown below) ![space id location]()
 
+This is what it would look like for a service located in the UK
+```curl --location --request GET 'https://eu-gb.ml.cloud.ibm.com/ml/v4/instances?space_id=[your space id]&version=2020-09-01' -H "Authorization: Bearer $access_token"```
+
+In the USA (Dallas) this would look like this. Check [here](https://cloud.ibm.com/apidocs/machine-learning#endpoint-url) for the correct endpoint for your region 
+```curl --location --request GET 'https://us-south.ml.cloud.ibm.com/ml/v4/instances?space_id=[your space id]&version=2020-09-01' -H "Authorization: Bearer $access_token"```
 
 ## Next Steps
 There are many ways streaming (or flowing or "in motion") data can be analysed with a Machine Learning model.
