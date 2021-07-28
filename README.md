@@ -115,8 +115,8 @@ Then run tbe following command from a terminal/command prompt
 
 JSON data is returned and you will see an access_token value. Copy this value and set the environment variable access_token to this value using the same method as above.
 
-Locate your space ID and note the location of your service (us-south, eu-gb etc etc). Use both of these to construct your call to the ML service.
-You can locate your space ID by going to Watson Studio and locating the correct space under the Deplymets menu then selecting the Manage tab. the Space ID is the Space GUID shown there (as shown below) ![space id location]()
+Locate your Space ID and note the location of your service (us-south, eu-gb etc etc). Use both of these to construct your call to the ML service.
+You can locate your Space ID by going to Watson Studio and locating the correct space under the Deployments menu then selecting the Manage tab. The Space ID is the Space GUID shown there (as shown below) ![space id location](https://github.com/tim-minter/machine-learning-with-streaming-data/blob/main/spaceID.png)
 
 This is what it would look like for a service located in the UK
 ```curl --location --request GET 'https://eu-gb.ml.cloud.ibm.com/ml/v4/instances?space_id=[your space id]&version=2020-09-01' -H "Authorization: Bearer $access_token"```
