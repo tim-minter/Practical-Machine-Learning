@@ -114,7 +114,7 @@ Now we are ready to apply our model to streaming data.
 
 ## Next Steps
 There are many ways streaming (or flowing or "in motion") data can be analysed with a Machine Learning model.
-They range from something linke a serverless function monitoring a ftp folder, an API (like the one you created above) being called dircetly by an application, using something like the "low code" NodeRED open source application available on pretty much any playform incliding Raspberry Pi, right up to builing an enterprose AI pipiepline with IBM Data Stage and Apache Kafka (or the IBM managed service version of Kafka... IBM Event Streams) and Watson Studio to manage the whole process end to end.
+They range from something like a serverless function monitoring a ftp folder, an API (like the one you created above) being called dircetly by an application, using something like the "low code" NodeRED open source application available on pretty much any playform incliding Raspberry Pi, right up to builing an enterprose AI pipiepline with IBM Data Stage and Apache Kafka (or the IBM managed service version of Kafka... IBM Event Streams) and Watson Studio to manage the whole process end to end.
 
 If you build services or solutions for you cutsomers using IBM technology, IBM can help you with expertise and resources tailored to your situation. Contact xxxx.
 
