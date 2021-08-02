@@ -38,11 +38,11 @@ Given some data it will perform the basic role of a data scientist for us ... to
 15. Select the result from the leaderboard that you want to convert to a model, and click the **Save as** button on the right hand side.
 16. Select **As a model** then, when that's done, a pop up will appear that allows you to go directly to the model in your project. You can also view the model by going to the **Assets** tab of your project.
 17. Your model is just an XML file asset at the moment. In order to turn this into something useful that can run and be called by your code, app, system etc you need to deploy it to the **IBM Machine Learning service**. This service contains run times to allow the model to run when called, and all the security and API management required of a cloud based service. Your model will effectively be available as a secured, cloud based API that can be called however you want, from wherever you want. If you want to deploy your model somewhere else on your own infrastructure you can do that too. Cloud Pak for Data also contains a catalogue feature that allows you to publish your model to your organisation, but that is not covered by this workshop. While viewing the model, click the **Promote to deployment space** button. ![Promote to deployment space](https://github.com/tim-minter/machine-learning-with-streaming-data/blob/main/promotetodeplymentspace.png)
-18. A "Space" is effectively a container to hold your models in. It has controllable access and run time resorces within it. this allows you to manage all aspects of your deployment for a set of models. In the **Promote to space** options page select a space you already have to deloy to (or create a space using the dropdown). Select **Go to the model in the space after deploying it** so you can easily do the next step. ![Promote to deployment space options](https://github.com/tim-minter/machine-learning-with-streaming-data/blob/main/promotetospaceoptions.png)
+18. A "Space" is effectively a container to hold your models in. It has controllable access and run time resources within it. this allows you to manage all aspects of your deployment for a set of models. In the **Promote to space** options page select a space you already have to deloy to (or create a space using the dropdown). Select **Go to the model in the space after deploying it** so you can easily do the next step. ![Promote to deployment space options](https://github.com/tim-minter/machine-learning-with-streaming-data/blob/main/promotetospaceoptions.png)
 19. The next page allows you to create an actual deployment in the space. Click on the **Create deployment** button ![Create deployment](https://github.com/tim-minter/machine-learning-with-streaming-data/blob/main/createdeployment.png)
 20. In the page that appears, select the the deployment method. **Online** in this case. ![Deployment options](https://github.com/tim-minter/machine-learning-with-streaming-data/blob/main/createadeploymentoptions.png) and provide a name for the deployment.
 21. The next page shows the list of deployments you have in the selected space, and their status. After a few seconds your deployment will be "Deployed" which means it is available to be used. Note the three dot menu on the right hand side of the deployment that allows you to **Replace asset** (if you ever update the model) and **Edit configuration** (assign more resources to running it, if it is heavily utilised). ![Deployments view](https://github.com/tim-minter/machine-learning-with-streaming-data/blob/main/deployments.png)
-22. Click on the model to open the page that allows you to test the model with manually entered data and provides the details you need to use the model via Curl, Java, Javascript, Python and Scala. Note that you need the API endpoint credentials (key) to use any of these methods of course. See **Using your model** below on how to obtain this **API key**. Lets test the model! Click on the **Test** tab and enter the 4 sets of data shown below. ![Model testing](https://github.com/tim-minter/machine-learning-with-streaming-data/blob/main/modeltesting.png)
+22. Click on the model to open the page that allows you to test the model with manually entered data and provides the details you need to use the model via Curl, Java, Javascript, Python and Scala. Note that you need the API endpoint credentials (key) to use any of these methods of course. See **Using your model** below on how to obtain this **API key**. Let's test the model! Click on the **Test** tab and enter the 4 sets of data shown below. ![Model testing](https://github.com/tim-minter/machine-learning-with-streaming-data/blob/main/modeltesting.png)
 23. Then click the **Predict** button. You should get these results...
 ```
 {
@@ -86,48 +86,51 @@ Given some data it will perform the basic role of a data scientist for us ... to
     ]
 }
 ```
-24. As we can see from the result, the 3rd and 4th data sets result in the model predicting failure with a probabilty of 1 ie 100%, as we would expect!
+24. As we can see from the result, the 3rd and 4th data sets result in the model predicting failure with a probability of 1 ie 100%, as we would expect!
 
 ## Using Your Model
 In step 21 above we could briefly see how to call the API of our model. That API was created when we deployed our model.
 Within Watson Studio our model sits within a deployment. At this point the model is separate from project. That project can be deleted or added to etc with no impact to the deployed model.
 Note on the main menu of Watson Studio (click the burger icon at the top left of the Watson Studio page) that there is a section for **Projects** and a separate section for **Deployments** that contains your deployment **Spaces**
 To locate your "running" model (essentially get back to the page you see in step 21 above) use the main menu and go to the deployment space that contains your model.
-Slightly confusingly the **Space** contains Assets and _**Deployments**_. We have a Deployment/Space/Deployment stucture which seems strange, but that is the way it has been built.
+Slightly confusingly the **Space** contains Assets and _**Deployments**_. We have a Deployment/Space/Deployment structure which seems strange, but that is the way it has been built.
 ![Deployments](https://github.com/tim-minter/machine-learning-with-streaming-data/blob/main/deploymentsspacedeployments.png)
 
 Within this **Space** select the **Deployments** tab and click on your model ![Deployments view](https://github.com/tim-minter/machine-learning-with-streaming-data/blob/main/apireference.png)
 
 This page shows the unique public API endpoint for your deployed model. This endpoint is unique to your deployment and will remain the same if you replace the model with a different one at any time. Note also the sample code provided that can be used to call/use your model from various common languages as well using the basic/universal CURL command. You will note that authentication is required to call the API of course. 
 
-To obatin the API key discussed on this page, click [here](https://cloud.ibm.com/iam/apikeys?_ga=2.107320577.2076131076.1626968412-622637277.1614526710) or go to your IBM Cloud Account and select **Manage** then **Access (IAM)** from the Manage menu on the top menu bar then **API Keys** from the menu on the left of the IAM page that appears. From that page you can create a new API key.
+To obtain the API key discussed on this page, click [here](https://cloud.ibm.com/iam/apikeys?_ga=2.107320577.2076131076.1626968412-622637277.1614526710) or go to your IBM Cloud Account and select **Manage** then **Access (IAM)** from the Manage menu on the top menu bar then **API Keys** from the menu on the left of the IAM page that appears. From that page you can create a new API key.
 
-See [here](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/ml-authentication.html) for more information on the authentication process you'll need to know about before deplying your application.
+See [here](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/ml-authentication.html) for more information on the authentication process you'll need to know about before deploying your application.
 
-## Using Your Model with Streaming Data
-Now we are ready to apply our model to streaming data.
-First we need to authenticate with the ML service. Using the API key you obtained above, run the following command (either substituting $API_KEY for the key or by setting the environment variable API_KEY to the value of the key via whatever process is relevant to your machine's operating system eg
+If you'd like to test out authentication via the Curl command this is the process:
+Save the API key you obtained above by running the following command
 
-on Mac ```export API_KEY=[your key] ```
+on Mac and Linux ```export API_KEY=[your key]```
+on Windows ```set API_KEY=[your key]```
 
-Then run tbe following command from a terminal/command prompt
+Then run the following command from a terminal/command prompt
 ```curl --insecure -X POST --header "Content-Type: application/x-www-form-urlencoded" --header "Accept: application/json" --data-urlencode "grant_type=urn:ibm:params:oauth:grant-type:apikey" --data-urlencode "apikey=$API_KEY" "https://iam.cloud.ibm.com/identity/token"```
 
-JSON data is returned and you will see an access_token value. Copy this value and set the environment variable access_token to this value using the same method as above.
+JSON data is returned and you will see an access_token value. Copy this value and set the environment variable IAM_TOKEN to this value using the same method as above.
+
+on Mac and Linux ```export IAM_TOKEN=[your token]```
+on Windows ```set IAM_TOKEN=[your token]```
 
 Locate your Space ID and note the location of your service (us-south, eu-gb etc etc). Use both of these to construct your call to the ML service.
-You can locate your Space ID by going to Watson Studio and locating the correct space under the Deployments menu then selecting the Manage tab. The Space ID is the Space GUID shown there (as shown below) ![space id location](https://github.com/tim-minter/machine-learning-with-streaming-data/blob/main/spaceID.png)
+You can locate your Space ID by going to Watson Studio and locating the correct space under the Deployments menu then selecting the Manage tab. The **Space ID** is the **Space GUID** shown there (as shown below) ![space id location](https://github.com/tim-minter/machine-learning-with-streaming-data/blob/main/spaceID.png)
 
 This is what it would look like for a service located in the UK
-```curl --location --request GET 'https://eu-gb.ml.cloud.ibm.com/ml/v4/instances?space_id=[your space id]&version=2020-09-01' -H "Authorization: Bearer $access_token"```
+```curl --location --request GET 'https://eu-gb.ml.cloud.ibm.com/ml/v4/instances?space_id=[your space id]&version=2020-09-01' -H "Authorization: Bearer $IAM_TOKEN"```
 
 In the USA (Dallas) this would look like this. Check [here](https://cloud.ibm.com/apidocs/machine-learning#endpoint-url) for the correct endpoint for your region 
-```curl --location --request GET 'https://us-south.ml.cloud.ibm.com/ml/v4/instances?space_id=[your space id]&version=2020-09-01' -H "Authorization: Bearer $access_token"```
+```curl --location --request GET 'https://us-south.ml.cloud.ibm.com/ml/v4/instances?space_id=[your space id]&version=2020-09-01' -H "Authorization: Bearer $IAM_TOKEN"```
 
 ## Next Steps
 There are many ways streaming (or flowing or "in motion") data can be analysed with a Machine Learning model.
-They range from something like a serverless function monitoring a ftp folder, an API (like the one you created above) being called dircetly by an application, using something like the "low code" NodeRED open source application available on pretty much any playform incliding Raspberry Pi, right up to builing an enterprose AI pipiepline with IBM Data Stage and Apache Kafka (or the IBM managed service version of Kafka... IBM Event Streams) and Watson Studio to manage the whole process end to end.
+They range from something like a serverless function monitoring a ftp folder, an API (like the one you created above) being called directly by an application, using something like the "low code" NodeRED open source application available on pretty much any platform including Raspberry Pi, right up to building an enterprise AI pipeline with IBM Data Stage and Apache Kafka (or the IBM managed service version of Kafka... IBM Event Streams) and Watson Studio to manage the whole process end to end.
 
-If you build services or solutions for you cutsomers using IBM technology, IBM can help you with expertise and resources tailored to your situation. Contact xxxx.
+If you build services or solutions for you customers using IBM technology, IBM can help you with expertise and resources tailored to your situation. Contact xxxx.
 
 
