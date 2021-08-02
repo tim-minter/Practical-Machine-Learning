@@ -3,6 +3,7 @@
 
 ## Introduction
 Part 1 of this workshop shows you how to create a model and deploy it, so it is usable. 
+
 Part 2 will show you how to apply this model to streaming data.
 
 The term "Machine Learning" or "AI" is fairly well understood by a lot of people but when it comes to you actually building a machine learning model and applying it to real data, I, for one, had a lot of unanswered questions, for example:
