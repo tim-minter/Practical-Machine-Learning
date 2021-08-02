@@ -1,5 +1,5 @@
-# A Workshop on Practically Applying Machine Learning to Streaming Data using Watson Studio
-### You have data streaming in from sensors. You want to train a model on that data and apply it to the data in real time, in the real world.
+# Creating a Machine Learning Model and Using It. A Practical Guide Using Watson Studio
+### You have data streaming in from sensors, transactions, clicks etc. You want to train a model on that data and apply it to the data in real time, in the real world. This workshop shows you how to create a model and deploy it, so it is usable.
 
 ## Introduction
 The term "Machine Learning" or "AI" is fairly well understood by a lot of people but when it comes to you actually building a machine learning model and applying it to real data, I, for one, had a lot of unanswered questions, for example:
