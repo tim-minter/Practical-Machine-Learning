@@ -104,7 +104,7 @@ To obtain the API key discussed on this page, click [here](https://cloud.ibm.com
 
 See [here](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/ml-authentication.html) for more information on the authentication process you'll need to know about before deploying your application.
 
-If you'd like to test out authentication via the Curl command this is the process:
+## Testing with the Curl command
 Save the API key you obtained above by running the following command
 
 on Mac and Linux ```export API_KEY=[your key]```
