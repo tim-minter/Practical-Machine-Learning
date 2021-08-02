@@ -1,7 +1,10 @@
-# Creating a Machine Learning Model and Using It. A Practical Guide Using Watson Studio
-### You have data streaming in from sensors, transactions, clicks etc. You want to train a model on that data and apply it to the data in real time, in the real world. This workshop shows you how to create a model and deploy it, so it is usable.
+# Creating a Machine Learning Model and Using It. A Practical Guide Using Watson Studio. Part 1
+### You have data streaming in from sensors, transactions, clicks etc. You want to train a model on that data and apply it to the data in real time, in the real world. 
 
 ## Introduction
+Part 1 of this workshop shows you how to create a model and deploy it, so it is usable. 
+Part 2 will show you how to apply this model to streaming data.
+
 The term "Machine Learning" or "AI" is fairly well understood by a lot of people but when it comes to you actually building a machine learning model and applying it to real data, I, for one, had a lot of unanswered questions, for example:
 
 * I know you create these models by training them but what do I train? What is the thing that sits there waiting to be given knowledge?
