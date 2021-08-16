@@ -12,9 +12,7 @@ The term "Machine Learning" or "AI" is fairly well understood by a lot of people
 You can find the solution to all these questions above by experimenting and doing it yourself, with various technologies and techniques, but the value of using a cloud service like Watson Studio really becomes evident in situations like this, I'd suggest. Really shortening the time to implement a working solution and really reducing the learning time that might otherwise be involved.
 
 ## Summary
-You will create a simple spreadsheet containing data you might get from a sensor. This allows you to get you familiar with how a model is created and you can then use that knowledge when thinking about your real data later. 
-You will create a Machine Learning model from the data with no code (using the powerful IBM Auto AI service). We will see how this pretty much performs the complex role of a data scientist for you in most situations.
-Critically we will then be able to see what this abstract idea of a Machine Learning model looks like and how it can be practically used (put somewhere where it can run, tested with some manually input data, called from code/your app/system etc).
+You will create a simple spreadsheet containing data you might get from a sensor. This allows you to get familiar with how a model is created from real data. You will create a Machine Learning model from the data with no code (using the powerful IBM Auto AI service). We will see how IBM Auto AI pretty much performs the complex role of a data scientist for you in most situations. Critically we will then be able to see what this abstract idea of a Machine Learning model looks like, and how it can be practically used. Here, “practically used” means put somewhere where it can run, can be tested with some manually input data and can be called from code/your app/system.
 
 ## Steps
 The first thing we need in order to train something, is knowledge or data.
