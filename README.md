@@ -108,24 +108,32 @@ See [here](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/ml-a
 Save the API key you obtained above by running the following command
 
 on Mac and Linux ```export API_KEY=[your key]```
+
 on Windows ```set API_KEY=[your key]```
 
 Then run the following command from a terminal/command prompt
+
 ```curl --insecure -X POST --header "Content-Type: application/x-www-form-urlencoded" --header "Accept: application/json" --data-urlencode "grant_type=urn:ibm:params:oauth:grant-type:apikey" --data-urlencode "apikey=$API_KEY" "https://iam.cloud.ibm.com/identity/token"```
 
 JSON data is returned and you will see an access_token value. Copy this value and set the environment variable IAM_TOKEN to this value using the same method as above.
 
 on Mac and Linux ```export IAM_TOKEN=[your token]```
+
 on Windows ```set IAM_TOKEN=[your token]```
 
 Locate your Space ID and note the location of your service (us-south, eu-gb etc etc). Use both of these to construct your call to the ML service.
 You can locate your Space ID by going to Watson Studio and locating the correct space under the Deployments menu then selecting the Manage tab. The **Space ID** is the **Space GUID** shown there (as shown below) ![space id location](https://github.com/tim-minter/machine-learning-with-streaming-data/blob/main/spaceID.png)
 
 This is what it would look like for a service located in the UK
+
 ```curl --location --request GET 'https://eu-gb.ml.cloud.ibm.com/ml/v4/instances?space_id=[your space id]&version=2020-09-01' -H "Authorization: Bearer $IAM_TOKEN"```
 
-In the USA (Dallas) this would look like this. Check [here](https://cloud.ibm.com/apidocs/machine-learning#endpoint-url) for the correct endpoint for your region 
+In the USA (Dallas) this would look like this. 
+
 ```curl --location --request GET 'https://us-south.ml.cloud.ibm.com/ml/v4/instances?space_id=[your space id]&version=2020-09-01' -H "Authorization: Bearer $IAM_TOKEN"```
+
+Check [here](https://cloud.ibm.com/apidocs/machine-learning#endpoint-url) for the correct endpoint for your region 
+
 
 ## Next Steps
 There are many ways streaming (or flowing or "in motion") data can be analysed with a Machine Learning model.
