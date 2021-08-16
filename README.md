@@ -1,4 +1,4 @@
-# A Workshop on Practically Applying Machine Learning to Streaming Data using Watson Studio
+# A Practical Machine Learning Workshop. Part 1.
 ### You have data streaming in from sensors. You want to train a model on that data and apply it to the data in real time, in the real world.
 
 ## Introduction
