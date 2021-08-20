@@ -1,4 +1,5 @@
-# A Practical Machine Learning Workshop. Part 1.
+# A Practical Machine Learning Workshop. 
+Building a scalable model available via secured API on public cloud.
 ### You have data streaming in from sensors. You want to train a model on that data and apply it to the data in real time, in the real world.
 
 ## Introduction
