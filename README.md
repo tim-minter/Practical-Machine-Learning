@@ -126,17 +126,18 @@ Next we will call the endpoint via curl as shown in the API Reference tab of the
 
 Run the command from the Curl tab (for example the command below (which uses the eu-gb endpoint)
 
-```
-curl -X POST --header "Content-Type: application/json" --header "Accept: application/json" --header "Authorization: Bearer $IAM_TOKEN" -d '{"inpu_data": [{"fields": ["Sensor","x defection","y defelection","temperature"],"values": [["Sensor1",0.3,1.3,21]]}]}' "https://eu-gb.ml.cloud.ibm.com/ml/v4/deployments/2cf41df0-bd88-4545-b318-ff118a7a8abd/predictions?version=2021-07-22"
-```
+```curl -X POST --header "Content-Type: application/json" --header "Accept: application/json" --header "Authorization: Bearer $IAM_TOKEN" -d '{"inpu_data": [{"fields": ["Sensor","x defection","y defelection","temperature"],"values": [["Sensor1",0.3,1.3,21]]}]}' "https://eu-gb.ml.cloud.ibm.com/ml/v4/deployments/2cf41df0-bd88-4545-b318-ff118a7a8abd/predictions?version=2021-07-22"```
 
 and this JSON should be returned
-```{
+
+```
+{
   "predictions": [{
     "fields": ["prediction", "probability"],
     "values": [["yes", [0.0, 1.0]]]
   }]
-}```
+}
+```
 
 Check [here](https://cloud.ibm.com/apidocs/machine-learning#endpoint-url) for the correct endpoint for your region 
 
