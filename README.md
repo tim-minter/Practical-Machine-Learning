@@ -85,7 +85,7 @@ Given some data it will perform the basic role of a data scientist for us ... to
     ]
 }
 ```
-23. As we can see from the result, the 3rd and 4th data sets result in the model predicting failure with a probability of 1 ie 100%, as we would expect!
+23. As we can see from the result, the 3rd and 4th data sets result in the model predicting failure, as we would expect!
 
 ## Using Your Model
 In step 21 above we could briefly see how to call the API of our model. That API was created when we deployed our model.
