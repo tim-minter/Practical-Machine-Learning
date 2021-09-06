@@ -131,7 +131,7 @@ The curl test data can be obtained in the correct format from the Test tab of th
 
 This is an example you can use, but remember to replace the endpoint with your own.
 
-```curl -X POST --header "Content-Type: application/json" --header "Accept: application/json" --header "Authorization: Bearer $IAM_TOKEN" -d '{"inpu_data": [{"fields": ["Sensor","x defection","y defelection","temperature"],"values": [["Sensor1",0.3,1.3,21]]}]}' "https://eu-gb.ml.cloud.ibm.com/ml/v4/deployments/2cf41df0-bd88-4545-b318-ff118a7a8abd/predictions?version=2021-07-22"```
+```curl -X POST --header "Content-Type: application/json" --header "Accept: application/json" --header "Authorization: Bearer $IAM_TOKEN" -d '{"input_data": [{"fields": ["Sensor","x defection","y defelection","temperature"],"values": [["Sensor1",0.3,1.3,21]]}]}' "https://eu-gb.ml.cloud.ibm.com/ml/v4/deployments/2cf41df0-bd88-4545-b318-ff118a7a8abd/predictions?version=2021-07-22"```
 
 and this JSON should be returned
 
