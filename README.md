@@ -124,11 +124,11 @@ Next we will call the endpoint via curl as shown in the API Reference tab of the
 
 ![Copy test data as json](https://github.com/tim-minter/machine-learning-with-streaming-data/blob/main/curlcommand.png)
 
-The curl test data can be obtained in the correct format from the Test tab of the page above. If you enter some values to test and then click the Provide input data as JSON icon you can copy and paste the test data into your cirl command (after edtiing it to remove all the indentation etc).
+The curl test data can be obtained in the correct format from the Test tab of the page above. If you enter some values to test and then click the **Provide input data as JSON** icon you can copy and paste the test data into your curl command (after edtiing it to remove all the indentation etc).
 
 ![Copy test data as json](https://github.com/tim-minter/machine-learning-with-streaming-data/blob/main/testdataasjson.png)
 
-Run the command from the Curl tab (for example the command below (which uses the eu-gb endpoint)
+This is an example you can use, but remember to replace the endpoint with your own.
 
 ```curl -X POST --header "Content-Type: application/json" --header "Accept: application/json" --header "Authorization: Bearer $IAM_TOKEN" -d '{"inpu_data": [{"fields": ["Sensor","x defection","y defelection","temperature"],"values": [["Sensor1",0.3,1.3,21]]}]}' "https://eu-gb.ml.cloud.ibm.com/ml/v4/deployments/2cf41df0-bd88-4545-b318-ff118a7a8abd/predictions?version=2021-07-22"```
 
