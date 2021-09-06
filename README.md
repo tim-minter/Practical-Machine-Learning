@@ -120,19 +120,25 @@ on Mac and Linux ```export IAM_TOKEN=[your token]```
 
 on Windows ```set IAM_TOKEN=[your token]```
 
-Locate your Space ID and note the location of your service (us-south, eu-gb etc etc). Use both of these to construct your call to the ML service.
-You can locate your Space ID by going to Watson Studio and locating the correct space under the Deployments menu then selecting the Manage tab. The **Space ID** is the **Space GUID** shown there (as shown below) ![space id location](https://github.com/tim-minter/machine-learning-with-streaming-data/blob/main/spaceID.png)
+Next we will call the endpoint via curl as shown in the API Reference tab of the page in step 20 adding our test values. These test values can be obtained fomr the Test tab. If you enter some value to test and then click the Test data as JSON  icon you cna copy and paste the test data into your cirl commans (after edtiing it to remove all the indentation etc).
 
-This is what it would look like for a service located in the UK
+![Copy test data as json](https://github.com/tim-minter/machine-learning-with-streaming-data/blob/main/testdataasjson.png)
 
-```curl --location --request GET 'https://eu-gb.ml.cloud.ibm.com/ml/v4/instances?space_id=[your space id]&version=2020-09-01' -H "Authorization: Bearer $IAM_TOKEN"```
+Run the command from the Curl tab (for example the command below (which uses the eu-gb endpoint)
 
-In the USA (Dallas) this would look like this. 
+```
+curl -X POST --header "Content-Type: application/json" --header "Accept: application/json" --header "Authorization: Bearer $IAM_TOKEN" -d '{"inpu_data": [{"fields": ["Sensor","x defection","y defelection","temperature"],"values": [["Sensor1",0.3,1.3,21]]}]}' "https://eu-gb.ml.cloud.ibm.com/ml/v4/deployments/2cf41df0-bd88-4545-b318-ff118a7a8abd/predictions?version=2021-07-22"
+```
 
-```curl --location --request GET 'https://us-south.ml.cloud.ibm.com/ml/v4/instances?space_id=[your space id]&version=2020-09-01' -H "Authorization: Bearer $IAM_TOKEN"```
+and this JSON should be returned
+```{
+  "predictions": [{
+    "fields": ["prediction", "probability"],
+    "values": [["yes", [0.0, 1.0]]]
+  }]
+}```
 
 Check [here](https://cloud.ibm.com/apidocs/machine-learning#endpoint-url) for the correct endpoint for your region 
-
 
 ## Next Steps
 There are many ways streaming (or flowing or "in motion") data can be analysed with a Machine Learning model.
