@@ -127,6 +127,7 @@ Next we will call the endpoint via curl as shown in the API Reference tab of the
 The curl test data can be obtained in the correct format from the Test tab of the page above. If you enter some values to test and then click the **Provide input data as JSON** icon you can copy and paste the test data into your curl command (after edtiing it to remove all the indentation etc).
 
 ![Copy test data as json](https://github.com/tim-minter/machine-learning-with-streaming-data/blob/main/testdataasjson.png)
+![Copy test data as json](https://github.com/tim-minter/machine-learning-with-streaming-data/blob/main/testdata.png)
 
 This is an example you can use, but remember to replace the endpoint with your own.
 
@@ -142,8 +143,6 @@ and this JSON should be returned
   }]
 }
 ```
-
-Check [here](https://cloud.ibm.com/apidocs/machine-learning#endpoint-url) for the correct endpoint for your region 
 
 ## Next Steps
 There are many ways streaming (or flowing or "in motion") data can be analysed with a Machine Learning model.
