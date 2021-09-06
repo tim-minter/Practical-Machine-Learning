@@ -90,8 +90,8 @@ Given some data it will perform the basic role of a data scientist for us ... to
 ## Using Your Model
 In step 20 above we could briefly see how to call the API of our model. That API was created when we deployed our model.
 Within Watson Studio our model sits within a deployment. At this point the model is separate from project. That project can be deleted or added to etc with no impact to the deployed model.
-Note on the main menu of Watson Studio (click the burger icon at the top left of the Watson Studio page) that there is a section for **Projects** and a separate section for **Deployments** that contains your deployment **Spaces**
-To locate your "running" model (essentially get back to the page you see in step 21 above) use the main menu and go to the deployment space that contains your model.
+Note on the main menu of Watson Studio (click the burger icon at the top left of the Watson Studio page) that there is a section for **Projects** and a separate section for **Deployments** that contains your deployment **Spaces**. 
+To locate your "running" model (essentially get back to the page you see in step 20 above) use the main menu and go to the deployment space that contains your model.
 Slightly confusingly the **Space** contains Assets and _**Deployments**_. We have a Deployment/Space/Deployment structure which seems strange, but that is the way it has been built.
 ![Deployments](https://github.com/tim-minter/machine-learning-with-streaming-data/blob/main/deploymentsspacedeployments.png)
 
