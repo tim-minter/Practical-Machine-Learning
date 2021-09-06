@@ -120,7 +120,11 @@ on Mac and Linux ```export IAM_TOKEN=[your token]```
 
 on Windows ```set IAM_TOKEN=[your token]```
 
-Next we will call the endpoint via curl as shown in the API Reference tab of the page in step 20 adding our test values. These test values can be obtained fomr the Test tab. If you enter some value to test and then click the Test data as JSON  icon you cna copy and paste the test data into your cirl commans (after edtiing it to remove all the indentation etc).
+Next we will call the endpoint via curl as shown in the API Reference tab of the page shown below. We will call it and provide the test data we want to use.
+
+![Copy test data as json](https://github.com/tim-minter/machine-learning-with-streaming-data/blob/main/curlcommand.png)
+
+The curl test data can be obtained in the correct format from the Test tab of the page above. If you enter some values to test and then click the Provide input data as JSON icon you can copy and paste the test data into your cirl command (after edtiing it to remove all the indentation etc).
 
 ![Copy test data as json](https://github.com/tim-minter/machine-learning-with-streaming-data/blob/main/testdataasjson.png)
 
