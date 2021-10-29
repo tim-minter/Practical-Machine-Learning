@@ -1,4 +1,4 @@
-# A Practical Machine Learning Workshop. 
+# A Practical Machine Learning Workshop
 How to build a scalable deployment of a machine learning model, available via secured API on public cloud. You have a data set you want to predict results from. With no code, we will train a model based on that data and show how to securely call it from your code/app.
 
 ## Introduction
