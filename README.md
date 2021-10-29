@@ -1,6 +1,5 @@
 # A Practical Machine Learning Workshop. 
-Building a scalable model available via secured API on public cloud.
-### You have data streaming in from sensors. You want to train a model on that data and apply it to the data in real time, in the real world.
+How to build a scalable deployment of a machine learning model, available via secured API on public cloud. You have a data set you want to predict results from. With no code, we will train a model based on that data and show how to securely call it from your code/app.
 
 ## Introduction
 The term "Machine Learning" or "AI" is fairly well understood by a lot of people but when it comes to you actually building a machine learning model and applying it to real data, I, for one, had a lot of unanswered questions, for example:
